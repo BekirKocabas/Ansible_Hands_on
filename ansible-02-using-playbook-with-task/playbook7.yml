@@ -1,0 +1,23 @@
+- name: remove apache
+  hosts: ubuntuservers
+  tasks:
+    - name: removing apache
+      ansible.builtin.apt:
+        name: apache2
+        state: absent
+        purge: yes
+        autoremove: yes
+
+- name: remove apache and wget
+  hosts: webservers
+  tasks: 
+   - name: removing apache and wget
+     ansible.builtin.yum:
+        pkg: "{{item}}"
+        state: absent
+
+     loop:
+        - httpd
+        - wget
+
+        
