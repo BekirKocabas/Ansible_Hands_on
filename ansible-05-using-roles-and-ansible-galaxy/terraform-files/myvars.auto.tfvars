@@ -1,7 +1,7 @@
 //aws_access_key = ""
 //aws_secret_key = ""
 myami = ["ami-06e46074ae430fba6", "ami-016eb5d644c333ccb", "ami-007855ac798b5175e"]
-mykey = "clarusway"
+mykey = "your key"
 tags = ["control_node", "web_server_1", "web_server_2"]
 instancetype = "t2.micro"
 num = 3
